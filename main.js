@@ -3,6 +3,9 @@ const GID = id => document.getElementById(id);
 const openLink = link => window.location.href = link;
 const profile = GID("profile");
 const container = GID("container");
+const particleContainer = document.querySelector('.animated-bg');
+const maxParticles = 30;
+let particleCount = 0;
 container.style.display = "none";
 let sound = null;
 
@@ -53,7 +56,7 @@ async function music() {
   switchMusic(muswitch);
 }
 
-function information(){
+function information() {
   const myProfile = graph("100029350902119");
   profile.src = myProfile[0];
   const bio = [
@@ -68,10 +71,31 @@ function information(){
   GID("group").onclick = () => openLink("https://www.facebook.com/groups/coders.dev");
   GID("created").innerText = "her bf";
 }
+function createParticle() {
+  //credits sayo pre @wataruajiro
+  if (particleCount >= maxParticles) return;
+  const particle = document.createElement('div');
+  particle.className = 'particle';
+  const startX = Math.random() * window.innerWidth;
+  const startY = Math.random() * window.innerHeight;
+  const moveX = (Math.random() - 0.5) * 200;
+  const moveY = (Math.random() - 0.5) * 200;
+  particle.style.left = startX + 'px';
+  particle.style.top = startY + 'px';
+  particle.style.setProperty('--moveX', moveX + 'px');
+  particle.style.setProperty('--moveY', moveY + 'px')
+  particle.style.animation = `particleFloat ${5 + Math.random() * 5}s ease-out forwards`;
+  particleContainer.appendChild(particle);
+  particleCount++;
+  particle.addEventListener('animationend', () => {
+    particle.remove();
+    particleCount--;
+  });
+}
 
 addEventListener("DOMContentLoaded", async () => {
   information();
   await music();
   container.style.display = "block";
-  setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 500);
+  setInterval(createParticle, 200);
 });
