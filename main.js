@@ -60,7 +60,7 @@ function information() {
   const myProfile = graph("100029350902119");
   profile.src = myProfile[0];
   const bio = [
-    "“Juitise is the last refuge of the weakness” 👑"
+    "“Justise is the last refuge of the weakness” 👑"
   ];
   GID("title").innerText = "Carl Joshua S Jacalan";
   GID("name").innerText = "Carl Joshua S Jacalan";
