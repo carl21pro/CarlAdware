@@ -62,17 +62,17 @@ function information() {
   const bio = [
     "“하나님을 신뢰하라” 🌷"
   ];
-  GID("title").innerText = "Wiegine's Profile";
-  GID("name").innerText = "Wiegine S. Echavez";
-  GID("username").innerText = "@wgneechvez";
+  GID("title").innerText = "Carl Joshua S Jacalan";
+  GID("name").innerText = "Carl Joshua S Jacalan";
+  GID("username").innerText = "Jaca G";
   GID("bio").innerText = bio[Math.floor(Math.random() * bio.length)];
-  GID("fb").onclick = () => openLink("https://www.facebook.com/profile.php?id=" + myProfile[1]);
-  GID("ig").onclick = () => openLink("https://www.instagram.com/wgneechvez");
+  GID("fb").onclick = () => openLink("https://www.facebook.com/profile.php?id=100056093558255" + myProfile[1]);
+  GID("Tik").onclick = () => openLink("https://www.tiktok.com/@tnccarl?_t=ZS-8tIx6NJN5QQ&_r=1");
   GID("group").onclick = () => openLink("https://www.facebook.com/groups/coders.dev");
   GID("created").innerText = "her bf";
 }
 function createParticle() {
-  //credits sayo pre @wataruajiro
+  //credits sayo pre @Arbeirth einstien
   if (particleCount >= maxParticles) return;
   const particle = document.createElement('div');
   particle.className = 'particle';
