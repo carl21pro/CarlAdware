@@ -60,7 +60,7 @@ function information() {
   const myProfile = graph("100029350902119");
   profile.src = myProfile[0];
   const bio = [
-    "“하나님을 신뢰하라” 🌷"
+    "“Juitise is the last refuge of the weakness” 👑"
   ];
   GID("title").innerText = "Carl Joshua S Jacalan";
   GID("name").innerText = "Carl Joshua S Jacalan";
