@@ -1,45 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8" />
+  <title>Jerobie | AI & Software Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/b2e8322685.js" crossorigin="anonymous"></script>
-  <title id="title">Profile</title>
-  <link rel="shortcut icon" href="profile.jpg"/>
-  <meta name="description" content="Visit my profile!">
-  <meta name="author" content="NethWs3Dev">
 </head>
 <body>
-  <div class="animated-bg">
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-</div>
-  <script src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<div id="container" class="container animate__animated animate__backInDown">
-    <img width="96" height="96" class="img" id="profile" />
-    <h1 class="p-top"><span id="name"></span>
-    <img style="margin-left: 5px" width="10" height="10" src="check.png" /></h1>
-    <p id="username"></p>
-    <p id="bio" class="p-top"></p>
-    <hr>
-    <p>Check out my social media accounts!</p>
-    <button id="fb" class="button1">
-      <i class="fa-brands fa-facebook"></i>
-      Facebook</button>
-    <button id="ig" class="button1">
-      <i class="fa-brands fa-instagram"></i>
-      Instagram</button>
-    <button id="group" class="button1">
-      <i class="fa-solid fa-user-group"></i>
-      Chatbot Community</button>
-    <p class="p-top">© 2025 | Created with 🤍 by <span id="created"></span></p>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+<!-- NAVIGATION -->
+<nav class="glass-nav">
+  <div class="nav-container">
+    <a href="#" class="logo">Jerobie</a>
+    <div class="nav-links">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#live-ai">AI Demo</a>
+      <a href="#socials">Socials</a>
+    </div>
   </div>
-  <script src="main.js"></script>
+</nav>
+
+<!-- RAIN BACKGROUND -->
+<div class="rain"></div>
+<div id="particles-js"></div>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyNHVkdnlnNGV5MWF6b3FsdGM4MnJyaGloZm84bTVldGhkM29lNTNhcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6wdZAQm2unplu/giphy.gif"
+       alt="Anime"
+       class="hero-img">
+
+  <h1>Jerobie</h1>
+  <p class="desc reveal">
+    Independent AI & Software Developer focused on building chatbot systems,
+    automation tools, REST APIs, and intelligent frameworks.  
+    Passionate about scalable systems, clean logic, and real-world AI solutions.
+  </p>
+  <p class="status-badge reveal">"하나님을 신뢰하라" 🌷</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills reveal">
+  <h2>Programming Skills</h2>
+
+  <div class="skill">
+    <span>JavaScript</span>
+    <div class="bar"><div class="fill" data-percent="69" style="width:0%">69%</div></div>
+  </div>
+
+  <div class="skill">
+    <span>Python</span>
+    <div class="bar"><div class="fill" data-percent="23" style="width:0%">23%</div></div>
+  </div>
+
+  <div class="skill">
+    <span>Others</span>
+    <div class="bar"><div class="fill" data-percent="8" style="width:0%">8%</div></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects reveal">
+  <h2>AI Projects</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>WonderChat AI</h3>
+      <p>Custom conversational AI with timestamp, author tracking, and unique framework.</p>
+    </div>
+
+    <div class="card">
+      <h3>BlesaBot</h3>
+      <p>Messenger automation bot with modular commands and AI integrations.</p>
+    </div>
+
+    <div class="card">
+      <h3>API Systems</h3>
+      <p>REST APIs for AI, utilities, chatbot tools, and automation services.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials reveal">
+  <h2>Testimonials</h2>
+
+  <div class="slider">
+    <div class="slide active">
+      <p>"Clean code, strong AI logic, very professional."</p>
+      <span>— Client</span>
+    </div>
+    <div class="slide">
+      <p>"Knows APIs and chatbot systems deeply."</p>
+      <span>— Developer</span>
+    </div>
+    <div class="slide">
+      <p>"Fast, reliable, and creative."</p>
+      <span>— Partner</span>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE AI -->
+<section id="live-ai" class="live-ai reveal">
+  <h2>Live AI Demo</h2>
+
+  <div class="ai-box">
+    <input id="aiInput" placeholder="Ask the AI..." />
+    <button onclick="askAI()">Send</button>
+    <pre id="aiOutput">AI response will appear here...</pre>
+  </div>
+</section>
+
+<!-- SOCIALS -->
+<section id="socials" class="socials reveal">
+  <h2>Tap to View My Social Media</h2>
+
+  <div class="icons">
+    <a href="https://www.facebook.com/profile.php?id=61560890733272" target="_blank" data-testid="link-facebook">Facebook</a>
+    <a href="https://www.facebook.com/profile.php?id=61586487418436" target="_blank" data-testid="link-ai">Ai</a>
+    <a href="https://github.com/deker123" target="_blank" data-testid="link-github">Github</a>
+    <a href="https://blesa123-bot.onrender.com" target="_blank" data-testid="link-botsite">Bot site</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p id="time"></p>
+  <p>© Jerobie — AI & Software Developer</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="script.js"></script>
 </body>
+</html>
